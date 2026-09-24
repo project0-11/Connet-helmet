@@ -21,18 +21,18 @@ progress{width:100%;height:14px;accent-color:var(--cyan)}.notice{color:var(--mut
  href="manifest.json">
 </head>
 <body>
-<header><span class="logo">◉</span><div><h1>Helmet Connect</h1><p>Helmet-mounted antenna monitoring • Demo interface</p></div></header>
+<header><span class="logo">◉</span><div><h1>Helmet Connect</h1><p>Helmet-mounted antenna monitoring </p></div></header>
 <main>
 <nav aria-label="App navigation">
 <button class="active" data-tab="dashboard">Dashboard</button><button data-tab="signal">Signal Monitor</button><button data-tab="device">Device</button><button data-tab="alerts">Alerts</button>
 </nav>
 <div id="dashboard" class="panel active">
-<div class="hero"><div class="kicker">HELMET ANTENNA SYSTEM</div><h2>✓ Demo connection active</h2><div class="hint">Sample dashboard data • Not connected to real hardware</div></div>
+<div class="hero"><div class="kicker">HELMET ANTENNA SYSTEM</div><h2>✓ Not connected </h2><div class="hint">Waiting for hardware connection• Not connected to real hardware</div></div>
 <div class="grid">
-<div class="card"><div class="ico">▥</div><div class="value">85%</div><div class="label">Signal strength</div><div class="sub">Sample value</div></div>
-<div class="card"><div class="ico">▰</div><div class="value">90%</div><div class="label">Battery</div><div class="sub">Sample value</div></div>
-<div class="card"><div class="ico">♨</div><div class="value">32°C</div><div class="label">Temperature</div><div class="sub">Sample value</div></div>
-<div class="card"><div class="ico">↔</div><div class="value">Active</div><div class="label">Link status</div><div class="sub">Demo state</div></div>
+<div class="card"><div class="ico">▥</div><div class="value">--</div><div class="label">Signal strength</div><div class="sub">Sample value</div></div>
+<div class="card"><div class="ico">▰</div><div class="value">--</div><div class="label">Battery</div><div class="sub">Sample value</div></div>
+<div class="card"><div class="ico">♨</div><div class="value">--</div><div class="label">Temperature</div><div class="sub">Sample value</div></div>
+<div class="card"><div class="ico">↔</div><div class="value">Disconnected</div><div class="label">Link status</div><div class="sub">Waiting for hardware connection.</div></div>
 </div>
 <section><h3>System overview</h3>
 <div class="row"><span class="ico">ᛒ</span><div class="txt"><strong>Bluetooth</strong><small>Not paired</small></div><span class="badge">Setup required</span></div>
@@ -41,7 +41,7 @@ progress{width:100%;height:14px;accent-color:var(--cyan)}.notice{color:var(--mut
 </section>
 </div>
 <div id="signal" class="panel">
-<div class="card"><div class="label">Current signal strength</div><div class="value">85%</div><div class="sub">Illustrative demo value only</div><br><progress value="85" max="100"></progress><p class="badge">Strong (sample status)</p></div>
+<div class="card"><div class="label">Current signal strength</div><div class="value">85%</div><div class="sub">Illustrative demo value only</div><br><progress value="--" max="100"></progress><p class="badge">Strong (sample status)</p></div>
 <p class="notice">A live signal graph requires compatible antenna hardware and an integrated data interface. The values shown here are examples only.</p>
 </div>
 <div id="device" class="panel">
