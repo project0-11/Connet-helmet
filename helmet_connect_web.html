@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Helmet Connect | Antenna Monitor</title>
+<style>
+:root{--bg:#071525;--panel:#0d2238;--line:#1a3c55;--cyan:#45d7e7;--muted:#9db3c5;--green:#6de5b1}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f5f8fc;font-family:Inter,system-ui,Arial,sans-serif}
+header{padding:20px 22px;background:#081a2c;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.logo{font-size:26px;color:var(--cyan)}h1{font-size:21px;margin:0}header p{margin:4px 0 0;color:var(--muted);font-size:12px}
+main{max-width:1050px;margin:auto;padding:22px}.hero{padding:24px;border-radius:20px;background:linear-gradient(125deg,#0e536a,#102c4b);border:1px solid #1c7187}
+.kicker{font-size:12px;letter-spacing:1.3px;color:#9decf5}.hero h2{margin:12px 0 8px;font-size:25px}.hint{font-size:12px;color:#d0e2ef}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:18px}.ico{font-size:24px;color:var(--cyan)}.value{font-size:27px;font-weight:750;margin:12px 0 4px}.label{font-weight:650}.sub{color:var(--muted);font-size:12px;margin-top:5px}
+section h3{font-size:18px;margin:24px 0 12px}.row{display:flex;align-items:center;gap:13px;padding:15px;background:var(--panel);border-radius:14px;margin-bottom:10px}.row .ico{width:30px}.row .txt{flex:1}.row strong{display:block}.row small{display:block;color:var(--muted);margin-top:4px}.badge{font-size:11px;color:#9decf5}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}button{background:#102c45;color:#d9edf8;border:1px solid var(--line);border-radius:12px;padding:11px 15px;cursor:pointer}button.active{background:#164a61;border-color:var(--cyan)}.panel{display:none}.panel.active{display:block}
+progress{width:100%;height:14px;accent-color:var(--cyan)}.notice{color:var(--muted);line-height:1.6}
+@media(min-width:700px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.hero h2{font-size:30px}}@media(max-width:420px){main{padding:14px}.grid{gap:9px}.card{padding:13px}.value{font-size:23px}}
+</style>
+</head>
+<body>
+<header><span class="logo">◉</span><div><h1>Helmet Connect</h1><p>Helmet-mounted antenna monitoring • Demo interface</p></div></header>
+<main>
+<nav aria-label="App navigation">
+<button class="active" data-tab="dashboard">Dashboard</button><button data-tab="signal">Signal Monitor</button><button data-tab="device">Device</button><button data-tab="alerts">Alerts</button>
+</nav>
+<div id="dashboard" class="panel active">
+<div class="hero"><div class="kicker">HELMET ANTENNA SYSTEM</div><h2>✓ Demo connection active</h2><div class="hint">Sample dashboard data • Not connected to real hardware</div></div>
+<div class="grid">
+<div class="card"><div class="ico">▥</div><div class="value">85%</div><div class="label">Signal strength</div><div class="sub">Sample value</div></div>
+<div class="card"><div class="ico">▰</div><div class="value">90%</div><div class="label">Battery</div><div class="sub">Sample value</div></div>
+<div class="card"><div class="ico">♨</div><div class="value">32°C</div><div class="label">Temperature</div><div class="sub">Sample value</div></div>
+<div class="card"><div class="ico">↔</div><div class="value">Active</div><div class="label">Link status</div><div class="sub">Demo state</div></div>
+</div>
+<section><h3>System overview</h3>
+<div class="row"><span class="ico">ᛒ</span><div class="txt"><strong>Bluetooth</strong><small>Not paired</small></div><span class="badge">Setup required</span></div>
+<div class="row"><span class="ico">⌁</span><div class="txt"><strong>Antenna</strong><small>Hardware not connected</small></div><span class="badge">Demo mode</span></div>
+<div class="row"><span class="ico">⬡</span><div class="txt"><strong>Device health</strong><small>No live sensor data</small></div><span class="badge">Demo mode</span></div>
+</section>
+</div>
+<div id="signal" class="panel">
+<div class="card"><div class="label">Current signal strength</div><div class="value">85%</div><div class="sub">Illustrative demo value only</div><br><progress value="85" max="100"></progress><p class="badge">Strong (sample status)</p></div>
+<p class="notice">A live signal graph requires compatible antenna hardware and an integrated data interface. The values shown here are examples only.</p>
+</div>
+<div id="device" class="panel">
+<section><h3>Device information</h3>
+<div class="row"><span class="ico">ᛒ</span><div class="txt"><strong>Bluetooth connection</strong><small>No device paired</small></div><span class="badge">Disconnected</span></div>
+<div class="row"><span class="ico">⌁</span><div class="txt"><strong>Antenna module</strong><small>Waiting for hardware</small></div><span class="badge">Unavailable</span></div>
+<div class="row"><span class="ico">▰</span><div class="txt"><strong>Battery sensor</strong><small>No sensor data received</small></div><span class="badge">Unavailable</span></div></section>
+<p class="notice">This demo does not connect to hardware. Bluetooth integration depends on the antenna system and its supported communication protocol.</p>
+</div>
+<div id="alerts" class="panel">
+<section><h3>Alerts & notifications</h3>
+<div class="row"><span class="ico">ⓘ</span><div class="txt"><strong>Demo mode enabled</strong><small>Values shown are sample values.</small></div><span class="badge">Info</span></div>
+<div class="row"><span class="ico">⊘</span><div class="txt"><strong>No hardware connected</strong><small>Pair a compatible device after integration.</small></div><span class="badge">Notice</span></div>
+</section>
+</div>
+</main>
+<script>
+document.querySelectorAll('nav button').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b===btn));
+ document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===btn.dataset.tab));
+}));
+</script>
+</body></html>
