@@ -1,0 +1,9 @@
+{
+  "name": "Helmet Connect",
+  "short_name": "Helmet",
+  "description": "Helmet-mounted antenna monitoring app",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#071525",
+  "theme_color": "#071525"
+}
